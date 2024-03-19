@@ -15,8 +15,8 @@ import java.util.function.Function;
 
 @Component
 public class JwtProvider implements JwtGenerator, JwtExtract {
-    private final String SECRET_KEY = "asdfadfasfasfsadfasfasdfasdfasfasdfsdfasdfasdfasfasdfafasfasdfasd";
-    private final long ACCESS_EXPIRE_DATE = 60 * 1000 * 10L;
+    private static final String SECRET_KEY = "asdfadfasfasfsadfasfasdfasdfasfasdfsdfasdfasdfasfasdfafasfasdfasd";
+    private static final long ACCESS_EXPIRE_DATE = 60 * 1000 * 10L;
 
     @Override
     public String generateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
